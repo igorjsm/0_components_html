@@ -6,6 +6,12 @@
     $nome = $_POST['txtNome'];
     $email = trim($_POST['txtEmail']);
     $arquivo = $_FILES['txtArquivo'];
+    $mensagem = $_POST['txaMensagem'];
+    $f1 = $_POST['slcF1'];
+    $equipe = $_POST['slcEquipe'];
+    $pilotos = $_POST['slcListaDePilotos'];
+    $piloto_campeao = $_POST['rdbPilotos'];
+    $construtor_campeao = $_POST['rdbConstrutores'];
     
     $senha = 'Desabilitada';
     if (isset($_POST['txtSenha'])) {
@@ -61,7 +67,6 @@
         $macacos .= ' Orangotango';
     }
     if (isset($_POST['chkChimpaze'])) {
-        echo 'bosta';
         $macacos .= ' Chimpaz&eacute;';
     }
     if (isset($_POST['chkBonobo'])) {
@@ -69,5 +74,23 @@
     }
 
     echo 'Macacos favoritos: ' . $macacos . '<br>';
+    echo 'Mensagem: ' . $mensagem  . '<br>';
+    echo 'F1: ' . $f1  . '<br>';
+    echo 'Equipe: ' . $equipe  . '<br>';
+    echo 'Pilotos favoritos: ';
+
+    $lastKey = array_key_last($pilotos);
+    foreach ($pilotos as $key => $piloto) {
+        echo $piloto;
+        if ($key == $lastKey) {
+            echo '.';
+        } else {
+            echo ', ';
+        }
+    }
+    echo '<br>';
+
+    echo 'Piloto campeão: ' . $piloto_campeao  . '<br>';
+    echo 'Construtor campeão: ' . $construtor_campeao  . '<br>';
 
 ?>

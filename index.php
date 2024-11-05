@@ -121,6 +121,71 @@
                 </td>
             </tr>
             <tr>
+                <td width="15%">Digite a sua mensagem:</td>
+                <td>
+                    <textarea name="txaMensagem" rows="5" cols="60"></textarea>
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td width="15%">O quanto voc&ecirc; gosta de F1?</td>
+                <td>
+                    <select name="slcF1" size="1">
+                        <option value="muito" selected="true">Muito</option>
+                        <option value="medio">Mais ou menos</option>
+                        <option value="pouco">Pouco</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td width="15%">Qual sua equipe favorita?</td>
+                <td>
+                    <select name="slcEquipe" size="3">
+                        <option value="Red Bull" selected="true">Red Bull</option>
+                        <option value="McLaren">McLaren</option>
+                        <option value="Ferrari">Ferrari</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td width="15%">Quais são seus pilotos favoritos?</td>
+                <td>
+                    <select name="slcListaDePilotos[]" size="9" multiple="true">
+                        <optgroup label="Red Bull">
+                            <option value="verstappen">Verstappen</option>
+                            <option value="perez">Perez</option>
+                        </optgroup>
+                        <optgroup label="McLaren">
+                            <option value="norris">Norris</option>
+                            <option value="piastri">Piastri</option>
+                        </optgroup>
+                        <optgroup label="Ferrari">
+                            <option value="leclerc">Leclerc</option>
+                            <option value="sainz">Sainz</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td width="15%">Quem voc&ecirc; acha que ganhar&aacute; o compeonato de...</td>
+                <td>
+                    <fieldset>
+                        <legend>Pilotos</legend>
+                        <input type="radio" name="rdbPilotos" id="rdbVerstappen" value="verstappen">
+                        <label for="rdbVerstappen">Verstappen</label><br>
+                        <input type="radio" name="rdbPilotos" id="rdbNorris" value="norris">
+                        <label for="rdbNorris">Norris</label><br>   
+                    </fieldset>
+                    <fieldset>
+                        <legend>Construtores</legend>
+                        <input type="radio" name="rdbConstrutores" id="rdbMcLaren" value="mcLaren">
+                        <label for="rdbMcLaren">McLaren</label><br>
+                        <input type="radio" name="rdbConstrutores" id="rdbFerrari" value="ferrari">
+                        <label for="rdbFerrari">Ferrari</label><br>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
                 <td align="right" colspan="2">
                     <input type="reset" name="btnLimpar" value="Limpar" />
                     <input type="submit" name="btnSalvar" value="Salvar" />
